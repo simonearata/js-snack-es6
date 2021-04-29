@@ -1,5 +1,18 @@
 $(function(){
   
+  // funzione che mi restituisce un array in cui sono stati pushati le lettere in base alla distanza di a da b
+  const snack5 = (arr, a, b) =>{
+    let arrReturn = [];
+  
+    for (let i in arrAlfabeto) {
+      if(i >= a && i <= b) {
+        arrReturn.push(arr[i]);
+      }
+    }
+  
+    return arrReturn; 
+  }
+
   const arrAlfabeto = ["A","B","C","D","E","F","G","H","I","L","M","N","O","P","Q","R","S","T","U","V","Z"];
   
   // chiediamo di inserire due numeri
@@ -20,16 +33,5 @@ $(function(){
 
   console.log(snack5(arrAlfabeto, a, b));
 
-  // funzione che mi restituisce un array in cui sono stati pushati le lettere in base alla distanza di a da b
-  function snack5 (arr, a, b){
-    let arrReturn = [];
 
-    for (let i in arrAlfabeto) {
-      if(i >= a && i <= b) {
-        arrReturn.push(arr[i]);
-      }
-    }
-
-    return arrReturn; 
-  }
 })
